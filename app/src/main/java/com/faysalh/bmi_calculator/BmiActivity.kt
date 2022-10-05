@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.faysalh.bmi_calculator.databinding.ActivityBmiactivityBinding
 
 class BmiActivity : AppCompatActivity() {
@@ -16,6 +17,8 @@ class BmiActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityBmiactivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        window.statusBarColor = ContextCompat.getColor(this,R.color.black)
 
          val  height = intent.getStringExtra("height")
          val  weight = intent.getStringExtra("weight")

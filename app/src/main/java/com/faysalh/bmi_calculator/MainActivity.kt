@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        window.statusBarColor = ContextCompat.getColor(this,R.color.black)
         binding.male.setOnClickListener {
             binding.male.background = ContextCompat.getDrawable(applicationContext,R.drawable.malefemalefocus)
            binding.female.background= ContextCompat.getDrawable(applicationContext,R.drawable.malefemalenotfocus)
